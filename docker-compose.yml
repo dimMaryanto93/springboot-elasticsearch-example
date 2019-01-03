@@ -1,0 +1,30 @@
+version: '3.6'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.5.4
+    ports:
+      - 9300:9300
+      - 9200:9200
+    environment:
+      - cluster.name=docker-cluster
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - elasticsearch_network
+  logstash:
+    image: docker.elastic.co/logstash/logstash:6.5.4
+    depends_on:
+      - elasticsearch
+    ports:
+      - 9600:9600
+      - 5044:5044
+    environment:
+      - http.host=0.0.0.0
+    networks:
+      - elasticsearch_network
+volumes:
+  elasticsearch_data:
+networks:
+  elasticsearch_network:
