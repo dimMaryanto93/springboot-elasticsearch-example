@@ -65,3 +65,15 @@ POST /products/default/1/_update
   }
 }
 ```
+
+## Meta filed
+
+- `_index`
+- `_id`
+- `_source` is original json
+- `_field_names`
+- `_routing`
+- `_version`
+- `_meta`
+
+
