@@ -1,5 +1,11 @@
 # Belajar elasticsearch with Springboot
 
+Running elastic via docker compose,
+
+```docker
+docker-compose up -d
+```
+
 ## Elasticsearch stack
 
 - kibana: analitic & visualitation as diagram
@@ -22,6 +28,8 @@
 - document store into index
 
 ## Example query for elasticsearch
+
+Kibana: [localhost:5601](http://localhost:5601)
 
 ```http request
 # creating an index
