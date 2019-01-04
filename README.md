@@ -31,6 +31,8 @@ docker-compose up -d
 
 Kibana: [localhost:5601](http://localhost:5601)
 
+![kibana scree](/docs/images/kibana.png)
+
 ```http request
 # creating an index
 PUT /products?pretty
