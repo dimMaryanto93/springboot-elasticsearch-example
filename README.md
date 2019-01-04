@@ -76,4 +76,37 @@ POST /products/default/1/_update
 - `_version`
 - `_meta`
 
+## Data type
+
+- core data type
+    - text,
+        - full text
+        - keyword
+    - number
+        - byte ( `-128 s/d 127` )
+        - short
+        - scale_float
+        - integer
+        - half_float
+        - float
+        - double
+    - date
+        - date as string with format `yyyy-MM-dd`
+        - timestamp
+        - number of millisecond
+    - boolean
+        - true
+        - false
+    - binary data type, accecpt a base64
+    - range, format json `{ "gte": 10, "lte": 20 }`
+- Complex data type
+    - Object as json
+    - Array
+    - Nested data type
+    - Geo data type
+- Specialize data type
+    - IP address
+    - Attachment Data type
+    
+
 
