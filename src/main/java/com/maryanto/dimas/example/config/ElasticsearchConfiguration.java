@@ -24,11 +24,14 @@ public class ElasticsearchConfiguration {
     private Integer elasticsearchPort;
     @Value("${elasticsearch.cluster-name}")
     private String elasticsearchClusterName;
+    @Value("${elasticsearch.node-name}")
+    private String nodeName;
 
     @Bean
     public Client client() throws UnknownHostException {
         Settings elasticsearchSettings = Settings.builder()
                 .put("client.transport.sniff", true)
+//                .put("node.name", nodeName)
                 .put("cluster.name", elasticsearchClusterName).build();
 
         TransportClient client = TransportClient.builder()

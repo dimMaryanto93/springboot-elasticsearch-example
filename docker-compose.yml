@@ -6,6 +6,7 @@ services:
       - 9300:9300
       - 9200:9200
     environment:
+      - transport.host=127.0.0.1
       - cluster.name=docker-cluster
       - discovery.type=single-node
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
