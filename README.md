@@ -1,11 +1,26 @@
 # Belajar elasticsearch with Springboot
 
-Running elastic via docker compose,
+[Download elasticsearch `<= 2.4.0`](https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/2.4.0/elasticsearch-2.4.0.zip)
 
-```docker
-docker-compose up -d
-```
+- Step installation:
+    - Extract
+    - Run it 
+    
+    ```bash
+        # for linux/mac
+        ./path-elasticsearch-version/bin/elastisearch
+    ``` 
+    
+[Download kibana `<= 2.4.0`](https://download.elastic.co/logstash/logstash/logstash-2.4.0.zip)
 
+- Step installation:
+    - Extract
+    - Run it
+    
+    ```bash
+    # for linux/mac
+    ./path-logstash-version/bin/logstash
+    ```
 ## Elasticsearch stack
 
 - kibana: analitic & visualitation as diagram
