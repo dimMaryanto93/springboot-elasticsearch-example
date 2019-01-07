@@ -22,8 +22,8 @@ public class ProductDao {
         return this.productRepository.save(value);
     }
 
-    public void delete(Product value) {
-        this.productRepository.delete(value);
+    public Product findById(String id) {
+        return this.productRepository.findOne(id);
     }
 
     public void deleteById(String id) {
