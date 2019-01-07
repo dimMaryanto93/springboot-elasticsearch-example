@@ -27,7 +27,11 @@ public class ExampleApplicationTests extends TestCase {
 
     @Test
     public void testSaveToElasticsearch() {
-        Product product = new Product(UUID.randomUUID().toString(), "Product 1", new BigDecimal(2500), false);
+        Product product = new Product(
+                UUID.randomUUID().toString(),
+                "Product 1",
+                new BigDecimal(2500),
+                false);
 
         product = dao.save(product);
         assertNotNull(product.getId());
